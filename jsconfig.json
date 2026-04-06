@@ -3,9 +3,8 @@
     "module": "NodeNext",
     "target": "ES2022",
     "moduleResolution": "NodeNext",
-    "baseUrl": "./src",
     "paths": {
-      "#src/*": ["*"]
+      "#src/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"]
