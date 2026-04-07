@@ -5,18 +5,14 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config src/index.js",
-    "start": "node -r dotenv/config src/index.js"
+    "dev": "node --watch --env-file=.env src/index.js",
+    "start": "node --env-file=.env src/index.js"
   },
   "imports": {
     "#src/*": "./src/*"
   },
   "dependencies": {
     "cors": "2.8.6",
-    "dotenv": "17.3.1",
     "express": "5.2.1"
-  },
-  "devDependencies": {
-    "nodemon": "3.1.14"
   }
 }
