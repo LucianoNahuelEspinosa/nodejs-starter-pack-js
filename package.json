@@ -4,8 +4,10 @@
   "description": "JS project with aliases and ESM",
   "main": "src/index.js",
   "type": "module",
+  "license": "MIT",
+  "author": "Luciano Nahuel Espinosa",
   "scripts": {
-    "dev": "node --watch --env-file=.env src/index.js",
+    "dev": "node scripts/watch.js",
     "start": "node --env-file=.env src/index.js"
   },
   "imports": {

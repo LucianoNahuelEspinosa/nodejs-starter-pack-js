@@ -1,3 +1,5 @@
+import consolePrintWithTimedate from "#src/helpers/consolePrintWithTimedate.js";
+
 /**
  * Logger Middleware
  *
@@ -12,9 +14,7 @@ const logger = (req, res, next) => {
         res.on("finish", () => {
             const duration = Date.now() - start;
             const statusColor = getStatusColor(res.statusCode);
-            console.log(
-                `${req.method} ${req.originalUrl} ${statusColor(res.statusCode)} - ${duration}ms`
-            );
+            consolePrintWithTimedate("log", `${req.method} ${req.originalUrl} ${statusColor(res.statusCode)} - ${duration}ms`, true, "en-US");
         });
     }
 

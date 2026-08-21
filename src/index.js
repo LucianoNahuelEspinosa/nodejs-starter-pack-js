@@ -5,6 +5,7 @@ import { corsOptions } from './config.js';
 
 import logger from './middlewares/logger.js';
 import rateLimiter from "./middlewares/rateLimiter.js";
+import errorHandler from "./middlewares/errorHandler.js";
 import routes from './routes/index.js';
 
 const app = express();
@@ -24,6 +25,7 @@ app.use(apiLimiter);
 
 const server = createServer(app);
 app.use("/api", routes);
+app.use(errorHandler);
 
 server.listen(port, () => {
     console.info(`Server running on port ${port}`);
